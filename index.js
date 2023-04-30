@@ -23,6 +23,11 @@ let arr1=['`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
 'Caps Lock','A','S','D','F','G','H','J','K','L',';',"'",'ENTER',
 'Shift','\\','Z','X','C','V','B','N','M','.',',','/','▲','Shift','Ctrl',
 'Win','Alt',' ','Alt','Ctrl','◄', '▼', '►'];
+let arr2=['`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
+'Tab','Й','Ц','У','К','Е','Н','Г','Ш','Щ','З','Х','Ъ','\\','DEL',
+'Caps Lock','Ф','Ы','В','А','П','Р','О','Л','Д','Ж',"Э",'ENTER',
+'Shift','\\','Я','Ч','С','М','И','Т','Ь','Б','Ю','/','▲','Shift','Ctrl',
+'Win','Alt',' ','Alt','Ctrl','◄', '▼', '►'];
 let activearr=[0,13,14,28,29,41,42,54,55,56,57,58,60,61,62,63,64];
 
 function addButton(arr) {
@@ -41,9 +46,24 @@ function addButton(arr) {
 
 addButton(arr1)
 
+let firstLett=document.querySelector('.btn15');
 document.addEventListener('keydown', function(event) {
-    console.log(event);
-    if (event.key=='Tab'){
+
+if (event.key=='Alt' && event.shiftKey== true) {
+    if (firstLett.innerHTML=='Й'){
+    let elems=document.querySelectorAll('.key');
+    
+    for (let i=0;i<=arr1.length-1;i++) {
+        elems[i].innerHTML=arr1[i]
+    }
+} else {
+    let elems=document.querySelectorAll('.key');
+    
+    for (let i=0;i<=arr2.length-1;i++) {
+        elems[i].innerHTML=arr2[i]
+    }
+}
+} else if (event.key=='Tab'){
         let elem=document.querySelector('.btn14');
         elem.classList.add('activeBtnAll')
     } else if (event.key=='Backspace') {

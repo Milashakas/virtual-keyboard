@@ -52,8 +52,12 @@ box-shadow: 3px 3px 4px 0px rgba(230, 0, 255, 0.45);
     width: 360px;
 }
 
-.btn13, .btn28, .btn29, .btn42 {
+.btn13, .btn28, .btn29 {
     min-width: 100px;
+}
+
+.btn42 {
+    min-width: 130px;
 }
 
 .btn14 {
