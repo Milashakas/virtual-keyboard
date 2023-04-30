@@ -40,7 +40,7 @@ color: white;
 background-color: black;
 border:1px solid black;
 border-radius: 5px;
-box-shadow: 4px 4px 7px 0px rgba(230, 0, 255, 0.45);
+box-shadow: 3px 3px 4px 0px rgba(230, 0, 255, 0.45);
 }
 
 .textarea {
@@ -48,11 +48,11 @@ box-shadow: 4px 4px 7px 0px rgba(230, 0, 255, 0.45);
     height: 150px;
 }
 
-.btn60 {
+.btn59 {
     width: 360px;
 }
 
-.btn13, .btn28, .btn29, .btn43 {
+.btn13, .btn28, .btn29, .btn42 {
     min-width: 100px;
 }
 
@@ -63,14 +63,18 @@ box-shadow: 4px 4px 7px 0px rgba(230, 0, 255, 0.45);
 .btn28 {
     min-width: 48px;
 }
-.btn42 {
+.btn41 {
     min-width: 90px;
 }
-.btn57, .btn62 {
+.btn56, .btn61 {
     min-width: 55px;
 }
 
 .activeBtn {
 background-color: rgb(72, 2, 80);
 border:1px solid black;
+}
+
+.activeBtnAll {
+    background-color: rgba(82, 12, 87, 0.542);   
 }
