@@ -23,13 +23,21 @@ flex-direction: column;
 }
 
 .keyboard {
-    width: 815px;
+    width: 830px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
 }
 
-
+.keywrapper {
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 .key {
     height:45px;
@@ -41,13 +49,27 @@ background-color: black;
 border:1px solid black;
 border-radius: 5px;
 box-shadow: 3px 3px 4px 0px rgba(230, 0, 255, 0.45);
+cursor: pointer;
+}
+
+
+
+.key:hover{
+    cursor: pointer;
+    background-color: rgba(82, 12, 87, 0.542);    
 }
 
 .textarea {
-    width: 815px;
+    width: 830px;
     height: 150px;
+    border: 1px solid black;
 }
 
+
+.textarea:focus-visible{
+outline: none;
+border: 1px solid black;
+}
 .btn59 {
     width: 360px;
 }

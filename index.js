@@ -74,7 +74,11 @@ if (event.key=='Alt' && event.shiftKey== true) {
         elem.classList.add('activeBtnAll') 
     } else if (event.key=='CapsLock') {
         let elem=document.querySelector('.btn29');
+        if(elem.classList.contains('activeBtnAll')){
+            elem.classList.remove('activeBtnAll') 
+        }else{
         elem.classList.add('activeBtnAll') 
+        }
     } else if (event.code=='ShiftLeft') {
         let elem=document.querySelector('.btn42');
         elem.classList.add('activeBtnAll') 
@@ -132,8 +136,7 @@ if (event.key=='Alt' && event.shiftKey== true) {
             let elem=document.querySelector('.btn28');
             elem.classList.remove('activeBtnAll')
         } else if (event.key=='CapsLock') {
-            let elem=document.querySelector('.btn29');
-            elem.classList.remove('activeBtnAll')
+            return 0
         } else if (event.code=='ShiftLeft') {
             let elem=document.querySelector('.btn42');
             elem.classList.remove('activeBtnAll')
@@ -177,3 +180,24 @@ if (event.key=='Alt' && event.shiftKey== true) {
         elem.classList.remove('activeBtnAll')
             }
           );
+
+           let capsLock=document.querySelector('.btn29');
+          let keys=document.querySelectorAll('.key');
+          for (let i=0;i<=keys.length-1;i++) {
+            keys[i].onclick=function () {
+                if (i==13){
+                   let value=textarea.value;
+                  value=value.slice(0,value.length-1)
+                  textarea.value=value;
+                  textarea.focus()
+                } else {
+                    if(capsLock.classList.contains('activeBtnAll')){
+                textarea.value+=keys[i].innerHTML;
+                textarea.focus()
+                    } else {
+                        textarea.value+=(keys[i].innerHTML).toLowerCase();
+                textarea.focus() 
+                    }
+                }
+            }
+          }
