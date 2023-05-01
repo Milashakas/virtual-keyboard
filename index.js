@@ -190,26 +190,17 @@ if (event.key=='Alt' && event.shiftKey== true) {
             let elem=document.querySelector('.btn64');
             elem.classList.remove('activeBtnAll') 
         } else{
-        if (event.key.length>1){
-            let target=event.key;
-            console.log(target);
-            let num=arr1.indexOf(target);
-            if(num<0){
-            let elem=document.querySelector(`.btn${num}`);
-            elem.classList.remove('activeBtnAll')   
-            }  
-        } else{
+        
         let target=event.key.toUpperCase();
         console.log(target);
         let num=arr1.indexOf(target);
         console.log(num)
-        if (num<0){
         let elem=document.querySelector(`.btn${num}`);
         elem.classList.remove('activeBtnAll')
-        }
+        
     }
     }
-            }
+            
           );
 
            let capsLock=document.querySelector('.btn29');
