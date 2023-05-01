@@ -104,3 +104,7 @@ border:1px solid black;
 .activeBtnAll {
     background-color: rgba(82, 12, 87, 0.542);   
 }
+
+.lanchange {
+    text-align: center;
+}

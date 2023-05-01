@@ -16,7 +16,10 @@ let keyboard=document.createElement('div');
 keyboard.classList.add('keyboard');
 keywrapper.append(keyboard);
 
-
+let changeLan=document.createElement('p');
+changeLan.classList.add('lanchange');
+changeLan.innerHTML='If you want to change language, you need to press Shift+Alt'
+keywrapper.append(changeLan);
 
 let arr1=['`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
 'Tab','Q','W','E','R','T','Y','U','I','O','P','[',']','\\','DEL',
@@ -184,13 +187,21 @@ if (event.key=='Alt' && event.shiftKey== true) {
            let capsLock=document.querySelector('.btn29');
           let keys=document.querySelectorAll('.key');
           for (let i=0;i<=keys.length-1;i++) {
+
             keys[i].onclick=function () {
                 if (i==13){
                    let value=textarea.value;
                   value=value.slice(0,value.length-1)
                   textarea.value=value;
                   textarea.focus()
-                } else {
+                } else if (i==29){
+                    if (capsLock.classList.contains('activeBtnAll')){
+                   capsLock.classList.remove('activeBtnAll')
+                    } else {
+                        capsLock.classList.add('activeBtnAll')
+                    }
+                } 
+                else {
                     if(capsLock.classList.contains('activeBtnAll')){
                 textarea.value+=keys[i].innerHTML;
                 textarea.focus()
